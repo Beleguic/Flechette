@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jeu de Flechette</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./reset.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<form id="formNumberPlayer">
+		<label> Choix du nombre de joueur </label>
+		<input type="text" name="playerNumber">
+		<span class="erreur">Le nombre de joueur doit etre superieur à 1</span>
+		<input type="submit" value="Valider le nombre de joueur">
+	</form>
+	<div id="areaInfo">
+		
+	</div>
+	<div style="display: none; z-index: 10;" id="jeuFlechette">
+		<map name="infographic">
+		  <area shape="poly" onclick="addPoint(9,2);"  coords="231,229,195,271,162,325,183,336,214,286,249,247" />
+		  <area shape="poly" onclick="addPoint(14,2);" coords="192,325,139,381,125,437,149,441,162,388,183,336" />
+		  <area shape="poly" onclick="addPoint(11,2);" coords="126,437,121,495,125,556,150,553,145,496,150,441" />
+		  <area shape="poly" onclick="addPoint(8,2);"  coords="125,556,139,613,162,669,184,658,163,609,149,553" />
+		  <area shape="poly" onclick="addPoint(16,2);" coords="162,669,194,721,231,766,249,748,213,707,184,658" />
+		  <area shape="poly" onclick="addPoint(7,2);"  coords="231,766,275,803,328,836,339,814,291,785,249,748" />
+		  <area shape="poly" onclick="addPoint(19,2);" coords="328,836,383,857,440,871,445,847,391,834,339,814" />
+		  <area shape="poly" onclick="addPoint(3,2);"  coords="440,871,502,876,559,871,555,848,502,852,445,847" />
+		  <area shape="poly" onclick="addPoint(17,2);" coords="559,871,620,857,672,834,661,813,612,834,555,848" />
+		  <area shape="poly" onclick="addPoint(2,2);"  coords="672,834,725,802,768,765,751,748,715,781,661,813" />
+		  <area shape="poly" onclick="addPoint(15,2);" coords="751,748,768,765,809,717,837,669,816,658,787,706" />
+		  <area shape="poly" onclick="addPoint(10,2);" coords="817,658,837,669,860,616,874,556,851,553,838,607" />
+		  <area shape="poly" onclick="addPoint(6,2);"  coords="851,553,874,556,879,500,874,438,852,442,855,501" />
+		  <area shape="poly" onclick="addPoint(13,2);" coords="851,442,874,438,861,381,838,325,816,336,838,390" />
+		  <area shape="poly" onclick="addPoint(4,2);"  coords="816,336,838,325,806,274,768,229,750,247,788,290" />
+		  <area shape="poly" onclick="addPoint(18,2);" coords="750,247,768,229,723,190,672,159,662,181,709,210" />
+		  <area shape="poly" onclick="addPoint(1,2);"  coords="661,181,672,159,618,137,559,123,556,146,611,159" />
+		  <area shape="poly" onclick="addPoint(20,2);" coords="556,146,560,123,500,118,440,122,444,146,500,142" />
+		  <area shape="poly" onclick="addPoint(5,2);"  coords="444,146,440,122,383,137,328,160,339,181,390,160" />
+		  <area shape="poly" onclick="addPoint(12,2);" coords="339,181,328,160,278,190,231,229,250,247,292,209" />
+		  <area shape="poly" onclick="addPoint(9,3);"  coords="349,347,332,329,310,356,289,389,310,401,328,372" />
+		  <area shape="poly" onclick="addPoint(14,3);" coords="310,401,289,389,275,423,266,460,290,464,297,432" />
+		  <area shape="poly" onclick="addPoint(11,3);" coords="290,464,266,460,263,496,266,534,289,530,287,496" />
+		  <area shape="poly" onclick="addPoint(8,3);"  coords="289,530,266,534,274,569,288,605,310,594,298,563" />
+		  <area shape="poly" onclick="addPoint(16,3);" coords="310,594,288,605,309,637,332,665,350,648,329,624" />
+		  <area shape="poly" onclick="addPoint(7,3);"  coords="350,648,332,665,361,689,392,709,404,686,374,669" />
+		  <area shape="poly" onclick="addPoint(19,3);" coords="404,686,392,709,428,722,464,731,466,707,434,699" />
+		  <area shape="poly" onclick="addPoint(3,3);"  coords="466,707,463,731,500,734,537,731,533,707,501,710" />
+		  <area shape="poly" onclick="addPoint(17,3);" coords="533,707,537,731,574,722,607,708,596,686,565,700" />
+		  <area shape="poly" onclick="addPoint(2,3);"  coords="596,686,608,708,640,688,667,664,650,647,626,668" />
+		  <area shape="poly" onclick="addPoint(15,3);" coords="650,647,667,664,692,636,711,604,690,594,671,623" />
+		  <area shape="poly" onclick="addPoint(10,3);" coords="689,594,711,604,725,568,734,534,709,530,702,563" />
+		  <area shape="poly" onclick="addPoint(6,3);"  coords="709,530,735,534,736,497,734,460,711,464,712,498" />
+		  <area shape="poly" onclick="addPoint(13,3);" coords="711,464,734,460,725,422,712,389,689,400,701,431" />
+		  <area shape="poly" onclick="addPoint(4,3);"  coords="689,400,711,389,692,359,667,329,650,347,672,373" />
+		  <area shape="poly" onclick="addPoint(18,3);" coords="650,347,667,329,639,305,607,286,596,308,625,326" />
+		  <area shape="poly" onclick="addPoint(1,3);"  coords="596,308,607,286,573,272,537,263,532,287,563,294" />
+		  <area shape="poly" onclick="addPoint(20,3);" coords="532,287,537,263,499,260,462,263,466,288,500,285" />
+		  <area shape="poly" onclick="addPoint(5,3);"  coords="466,288,462,263,425,273,392,286,403,308,434,295" />
+		  <area shape="poly" onclick="addPoint(12,3);" coords="403,308,392,286,361,305,332,329,349,347,375,325" />
+		  <area shape="poly" onclick="addPoint(9,1);"  coords="249,247,215,287,183,336,289,389,310,356,332,329" />
+		  <area shape="poly" onclick="addPoint(14,1);" coords="183,336,162,388,150,441,267,460,275,423,289,389" />
+		  <area shape="poly" onclick="addPoint(11,1);" coords="149,441,146,496,150,553,266,534,263,496,266,460" />
+		  <area shape="poly" onclick="addPoint(8,1);"  coords="150,553,163,609,185,658,288,605,274,569,266,534" />
+		  <area shape="poly" onclick="addPoint(16,1);" coords="184,658,213,707,249,748,332,665,309,637,288,605" />
+		  <area shape="poly" onclick="addPoint(7,1);"  coords="249,748,291,785,339,814,393,709,361,689,332,665" />
+		  <area shape="poly" onclick="addPoint(19,1);" coords="339,814,391,835,445,847,463,731,427,722,392,709" />
+		  <area shape="poly" onclick="addPoint(3,1);"  coords="445,847,502,852,555,848,537,731,500,734,463,731" />
+		  <area shape="poly" onclick="addPoint(17,1);" coords="555,848,612,834,661,813,607,708,574,722,537,731" />
+		  <area shape="poly" onclick="addPoint(2,1);"  coords="661,813,714,781,751,748,667,664,640,688,607,708" />
+		  <area shape="poly" onclick="addPoint(15,1);" coords="751,748,787,706,816,658,711,604,692,636,667,664" />
+		  <area shape="poly" onclick="addPoint(10,1);" coords="816,658,838,607,851,553,734,534,725,568,711,604" />
+		  <area shape="poly" onclick="addPoint(6,1);"  coords="851,553,855,501,851,442,734,460,736,497,734,534" />
+		  <area shape="poly" onclick="addPoint(13,1);" coords="851,442,838,390,816,336,711,389,725,422,735,460" />
+		  <area shape="poly" onclick="addPoint(4,1);"  coords="816,336,788,290,750,247,667,329,692,359,711,389" />
+		  <area shape="poly" onclick="addPoint(18,1);" coords="750,247,709,210,661,181,607,286,639,305,667,329" />
+		  <area shape="poly" onclick="addPoint(1,1);"  coords="661,181,611,159,556,146,537,263,573,272,607,286" />
+		  <area shape="poly" onclick="addPoint(20,1);" coords="556,146,500,142,444,146,462,263,499,260,537,263" />
+		  <area shape="poly" onclick="addPoint(5,1);"  coords="444,146,390,160,339,181,392,286,425,273,462,263" />
+		  <area shape="poly" onclick="addPoint(12,1);" coords="339,181,292,209,249,247,332,329,361,305,392,286" />
+		  <area shape="poly" onclick="addPoint(9,1);"  coords="349,347,328,372,310,401,466,480,473,471" />
+		  <area shape="poly" onclick="addPoint(14,1);" coords="310,401,297,432,290,464,463,491,466,480" />
+		  <area shape="poly" onclick="addPoint(11,1);" coords="290,464,287,496,289,530,463,503,463,491" />
+		  <area shape="poly" onclick="addPoint(8,1);"  coords="289,530,298,563,310,594,466,514,463,503" />
+		  <area shape="poly" onclick="addPoint(16,1);" coords="310,594,329,624,350,648,473,523,466,514" />
+		  <area shape="poly" onclick="addPoint(7,1);"  coords="350,648,374,669,404,686,483,531,473,523" />
+		  <area shape="poly" onclick="addPoint(19,1);" coords="404,686,434,699,466,707,493,534,483,531" />
+		  <area shape="poly" onclick="addPoint(3,1);"  coords="466,707,501,710,533,707,506,534,493,534" />
+		  <area shape="poly" onclick="addPoint(17,1);" coords="533,707,565,700,596,686,517,531,506,534" />
+		  <area shape="poly" onclick="addPoint(2,1);"  coords="596,686,626,668,650,647,527,523,517,531" />
+		  <area shape="poly" onclick="addPoint(15,1);" coords="650,647,671,623,689,594,533,515,527,523" />
+		  <area shape="poly" onclick="addPoint(10,1);" coords="689,594,702,563,710,530,537,503,533,515" />
+		  <area shape="poly" onclick="addPoint(6,1);"  coords="709,530,712,498,710,464,538,491,537,503" />
+		  <area shape="poly" onclick="addPoint(13,1);" coords="710,464,701,431,689,400,534,480,538,491" />
+		  <area shape="poly" onclick="addPoint(4,1);"  coords="689,400,672,373,650,347,527,470,534,480" />
+		  <area shape="poly" onclick="addPoint(18,1);" coords="650,347,625,326,597,308,517,463,527,470" />
+		  <area shape="poly" onclick="addPoint(1,1);"  coords="596,308,563,294,532,287,505,460,517,463" />
+		  <area shape="poly" onclick="addPoint(20,1);" coords="532,287,500,285,466,288,494,460,505,460" />
+		  <area shape="poly" onclick="addPoint(5,1);"  coords="466,288,434,295,403,308,483,464,494,460" />
+		  <area shape="poly" onclick="addPoint(12,1);" coords="403,308,375,325,349,347,473,471,483,464" />
+		  <area shape="poly" onclick="addPoint(50,1);"  coords="500,481,489,486,484,497,489,508,500,513,511,509,515,498,511,487" />
+		  <area shape="poly" onclick="addPoint(25,1);" coords="505,460,494,460,483,464,473,471,466,480,463,491,463,503,466,514,473,523,483,531,493,534,506,534,517,531,527,523,533,515,537,503,537,491,534,480,527,470,517,463" />
+		</map>
+		<img usemap="#infographic" src="./flechette.png" width="1000" style='margin: auto;'>
+	</div>
+	<div id="pointTouchContainer">
+		
+	</div>
+
+
+	<script type="text/javascript">
+
+
+		let numberOfThrow		= 1;
+		let numberOfPlayers 	= 0;
+		let playerName			= [];
+		let playerCountTouch 	= [];
+		let score				= [];
+		let playerTour 			= 0;
+		let jeuFlechette 		= document.getElementById('jeuFlechette');
+		let areaInfo 			= document.getElementById('areaInfo');
+		let containerPoint 		= document.getElementById('pointTouchContainer');
+		const colorArray 		= ["#6600FF", "#3399FF", "#003366", "#00FF99", "#660099", "#33CC33", "#0066CC", "#000000", "#66CC00", "#333399", "#3300CC", "#00CCFF", "#3366FF", "#6699CC", "#003300", "#33CC99", "#666666", "#00FFFF", "#00CC00", "#339900", "#330066", "#336699", "#66CC99", "#3399CC", "#6633FF", "#33CCFF", "#000033", "#6666CC", "#333333", "#0099FF", "#006600", "#3366CC", "#660033", "#33FF66", "#00FF00", "#3300FF", "#663300", "#009999", "#00FF33", "#33FFCC", "#003399", "#330099", "#669966", "#66CC33", "#666699", "#336600", "#00FFCC", "#33FF99", "#66CC66", "#0000CC", "#6633CC", "#339933", "#339966", "#0033CC", "#33FF33", "#000066", "#006699", "#66CCFF", "#330000", "#33CCCC", "#000099", "#00CC33", "#330033", "#33FF00", "#6666FF", "#336666", "#663366", "#6699FF", "#3333FF", "#333366", "#00FF66", "#0033FF",  "#0066FF", "#33FFFF", "#660000", "#666600", "#3333CC", "#0000FF", "#009933", "#66CC00", "#660066",  "#663399", "#0099CC", "#669999", "#33CC66", "#666633", "#333300", "#6600CC", "#339999", "#009900",  "#33CC00", "#006666", "#6699CC", "#00CC66", "#663333", "#6666CC", "#00CC99", "#3333CC", "#666699", "#00CC66", "#3333CC", "#666633"];
+
+		let mouseX = 0;
+		let mouseY = 0;
+
+		document.addEventListener('mousemove', function(e) {
+			mouseX = e.pageX;
+			mouseY = e.pageY;
+        });
+
+		let form = document.getElementById('formNumberPlayer');
+
+		form.addEventListener('submit', function(event) {
+            // Empêche la soumission par défaut du formulaire
+            event.preventDefault();
+
+            let estValide = true;
+            let nombreJoueurs = form.children[1].value;
+            let erreurJoueurs = form.children[2];
+            let inputJoueurs = form.children[1];
+
+            if (!estNombre(nombreJoueurs) || nombreJoueurs < 1) {
+                afficherErreur(erreurJoueurs, inputJoueurs);
+                estValide = false;
+            } else {
+                masquerErreur(erreurJoueurs, inputJoueurs);
+            }
+
+
+            if(estValide){
+	            numberOfPlayers = Number(form.children[1].value);
+	            setup(numberOfPlayers);
+	        }
+
+        });
+
+
+
+        function setup(numberOfPlayers){
+
+        	playerCountTouch 	= [];
+        	score 				= [];
+        	playerName 			= [];
+        	areaInfo.textContent = '';
+
+        	playerCountTouch = new Array(numberOfPlayers).fill(1);
+        	score = new Array(numberOfPlayers).fill(0);
+        	for (var i = 0; i < numberOfPlayers; i++) {
+        		playerName.push('Joueur ' + (i+1));
+        	}
+        	showInfo();
+        	jeuFlechette.style.display = 'flex';
+        }
+
+		function addPoint(x, mul){
+
+			if(numberOfThrow <= 3){
+
+				let div = createPoint(playerTour,playerCountTouch);
+				containerPoint.appendChild(div);
+
+		    	score[playerTour] += x * mul;
+		    	playerCountTouch[playerTour]++;
+		    	let spanScore = document.getElementById('score-'+playerTour);
+		    	spanScore.textContent = score[playerTour];
+		    	playerTour++;
+
+		    	if(playerTour == numberOfPlayers){
+		    		playerTour = 0;
+		    		numberOfThrow++;
+		    	}
+		    }
+		    else{
+		    	stop();
+		    }
+
+		    console.log(score);
+		}
+
+		function createPoint(player, number){
+
+			let numberOfTouch = playerCountTouch[player];
+
+			let div = document.createElement("div");
+		    div.classList.add('touch');
+
+		    // Utilisation des coordonnées de la souris issues de l'évènement
+		    div.style.left = (mouseX - 7) + 'px';
+		    div.style.top = (mouseY - 7) + 'px';
+
+		    div.textContent = numberOfTouch;
+
+		    div.style.backgroundColor = colorArray[player];
+
+		    return div;
+
+		}
+
+		function afficherErreur(elementErreur, elementInput) {
+            elementErreur.style.display = 'block';
+            elementInput.classList.add('champInvalide');
+            elementInput.classList.remove('champValide');
+        }
+
+        // Fonction pour masquer un message d'erreur
+        function masquerErreur(elementErreur, elementInput) {
+            elementErreur.style.display = 'none';
+            elementInput.classList.remove('champInvalide');
+            elementInput.classList.add('champValide');
+        }
+
+        function estNombre(valeur) {
+
+        	if(typeof valeur === 'number' && Number.isFinite(valeur)){
+        		return true;
+        	}
+        	else{
+        		let tempValue = Number(valeur);
+        		if(tempValue != NaN && Number.isFinite(tempValue)){
+        			return true;
+        		}
+        		else{
+        			return false;
+        		}
+        	}
+
+        	return false;
+        }
+
+        function showInfo(){
+
+        	for (var i = 0; i < numberOfPlayers; i++) {
+
+        		let div = document.createElement("div");
+        		div.classList.add('playerName');
+        		let divColor = document.createElement("div");
+        		divColor.classList.add('divColor');
+        		divColor.style.backgroundColor = colorArray[i];
+
+        		let p = document.createElement('p');
+        		p.textContent = playerName[i] + '  - Score : ';
+
+        		let score = document.createElement('span');
+        		score.id = `score-${i}`;
+        		score.textContent = '0';
+
+        		p.appendChild(score);
+        		div.appendChild(divColor);
+        		div.appendChild(p);
+
+        		areaInfo.appendChild(div);
+        		
+        	}
+
+        }
+
+        function stop(){
+
+        	let bestScoreIndex = obtenirIndexMax(score);
+
+        	let h2 = document.createElement('h2');
+        	h2.textContent = `Fin de la partie - ${playerName[bestScoreIndex]} a obtenu un score de ${score[bestScoreIndex]}`;
+
+        	let button = document.createElement("button");
+        	button.textContent = 'Recommencer une partie ?';
+        	button.addEventListener('click', function(event) {
+        		reset();
+        	});
+
+        	areaInfo.appendChild(h2);
+        	areaInfo.appendChild(button);
+
+        }
+
+        function reset(){
+
+        	numberOfPlayers 			= 0;
+			playerName					= [];
+			playerCountTouch 			= [];
+			score						= [];
+			playerTour 					= 0;
+			areaInfo.textContent 		= '';
+			jeuFlechette.style.display 	= 'none';
+			containerPoint.textContent 	= '';
+
+
+        }
+
+        function obtenirIndexMax(tableau) {
+		    if (tableau.length === 0) return -1; // Gestion du tableau vide
+
+		    const max = Math.max.apply(null, tableau);
+		    return tableau.findIndex(element => element === max);
+		}
+
+
+	</script>
+</body>
+</html>
